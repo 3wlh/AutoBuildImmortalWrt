@@ -1,9 +1,11 @@
 #!/bin/bash
-# 添加插件
-Download(){ #下载函数
+# 下载函数
+function Download(){ 
     [[ -d /home/build/immortalwrt/diy_packages ]] || mkdir -p /home/build/immortalwrt/diy_packages
+    echo "Downloading ${1}"
     wget -qP /home/build/immortalwrt/diy_packages ${1} --show-progress
 }
+# 添加插件
 echo "下载插件"
 Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-unishare_26.105.65729~ff1ff84_all.ipk"
 Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/unishare_1.0.1-r5_all.ipk"
