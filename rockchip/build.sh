@@ -42,7 +42,7 @@ PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
 PACKAGES="$PACKAGES luci-app-unishare"
 PACKAGES="$PACKAGES luci-app-v2ray-server"
 # ddns解析
-PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn ddns-scripts-aliyun ddns-scripts-cloudflare ddns-scripts-dnspod"
+PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn ddns-scripts_aliyun ddns-scripts-cloudflare ddns-scripts-dnspod"
 # PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 # PACKAGES="$PACKAGES openssh-sftp-server"
 # PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
