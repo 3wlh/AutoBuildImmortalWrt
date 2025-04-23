@@ -1,6 +1,6 @@
 #!/bin/bash
 # 添加插件
-echo "src/gz openwrt_kiddin9 https://dl.openwrt.ai/latest/packages/aarch64_generic/kiddin9" >> /home/build/immortalwrt/repositories.conf
+echo "src/gz kiddin9_packages https://dl.openwrt.ai/latest/packages/aarch64_generic/kiddin9" >>/home/build/immortalwrt/repositories.conf
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
