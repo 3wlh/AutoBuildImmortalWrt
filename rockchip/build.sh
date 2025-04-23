@@ -1,6 +1,6 @@
 #!/bin/bash
 # 添加插件
-sed -i '1a\src/gz kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/' /home/build/immortalwrt/repositories.conf
+sed -i '1a\src kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/' /home/build/immortalwrt/repositories.conf
 # echo "src/gz kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/" >>/home/build/immortalwrt/repositories.conf
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
