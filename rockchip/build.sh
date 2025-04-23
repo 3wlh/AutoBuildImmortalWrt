@@ -1,6 +1,7 @@
 #!/bin/bash
 # 添加插件
-# echo "src/gz kiddin9_packages https://dl.openwrt.ai/latest/packages/aarch64_generic/kiddin9" >>/home/build/immortalwrt/repositories.conf
+sed -i '1a\src/gz kiddin9_packages https://dl.openwrt.ai/latest/packages/aarch64_generic/kiddin9/' /home/build/immortalwrt/repositories.conf
+# echo "src/gz kiddin9_packages https://dl.openwrt.ai/latest/packages/aarch64_generic/kiddin9/" >>/home/build/immortalwrt/repositories.conf
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
@@ -39,7 +40,7 @@ PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-alist-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
-# PACKAGES="$PACKAGES luci-app-unishare"
+PACKAGES="$PACKAGES luci-app-unishare"
 PACKAGES="$PACKAGES luci-app-v2ray-server"
 # ddns解析
 PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn ddns-scripts_aliyun ddns-scripts-cloudflare ddns-scripts-dnspod"

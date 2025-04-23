@@ -106,7 +106,6 @@ jobs:
               --user root \
               -v "${{ github.workspace }}/bin:/home/build/immortalwrt/bin" \
               -v "${{ github.workspace }}/files:/home/build/immortalwrt/files" \
-              -v "${{ github.workspace }}/packages:/home/build/immortalwrt/packages" \
               -v "${{ github.workspace }}/rockchip/imm.config:/home/build/immortalwrt/.config" \
               -v "${{ github.workspace }}/rockchip/build.sh:/home/build/immortalwrt/build.sh" \
               -e PROFILE=$profile \
