@@ -1,13 +1,10 @@
 #!/bin/bash
 # 添加插件
-echo "$PWD"
-exit 0
-
-# wget -p /root/ipk -r https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/
-# find /path/to/search -name "*.ipk" -exec mv {} /path/to/destination \;
-
-sed -i '1a\src kiddin9_packages ' /home/build/immortalwrt/repositories.conf
-# echo "src/gz kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/" >>/home/build/immortalwrt/repositories.conf
+mkdir -p /home/build/immortalwrt/kiddin9_packages && cd /home/build/immortalwrt/kiddin9_packages
+wget -r -p https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/
+find /home/build/immortalwrt/kiddin9_packages "*.ipk" -exec mv {} /home/build/immortalwrt/packages/kiddin9_packages \;
+ls /home/build/immortalwrt/packages/kiddin9_packages
+cd /home/build/immortalwrt
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
