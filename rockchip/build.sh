@@ -9,8 +9,11 @@ function Download(){
 echo "下载插件"
 Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-unishare_26.105.65729~ff1ff84_all.ipk"
 Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/unishare_1.0.1-r5_all.ipk"
+Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/webdav2_4.3.1-r4_aarch64_generic.ipk"
 Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-v2ray-server_26.105.65729~ff1ff84_all.ipk"
+echo "========================================================================="
 ls /home/build/immortalwrt/packages/diy_packages
+echo "========================================================================="
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
