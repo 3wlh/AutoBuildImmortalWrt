@@ -1,9 +1,13 @@
 #!/bin/bash
 # 添加插件
-mkdir -p /home/build/immortalwrt/diy_packages
-wget -p /home/build/immortalwrt/diy_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-unishare_26.105.65729~ff1ff84_all.ipk
-wget -p /home/build/immortalwrt/diy_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/unishare_1.0.1-r5_all.ipk
-wget -p /home/build/immortalwrt/diy_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-v2ray-server_26.105.65729~ff1ff84_all.ipk
+function Download(){ #下载函数
+[[ -d /home/build/immortalwrt/diy_packages ]] && mkdir -p /home/build/immortalwrt/diy_packages
+wget -qp /home/build/immortalwrt/diy_packages ${1} --show-progress
+}
+
+Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-unishare_26.105.65729~ff1ff84_all.ipk"
+Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/unishare_1.0.1-r5_all.ipk"
+Download "https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/luci-app-v2ray-server_26.105.65729~ff1ff84_all.ipk"
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
 echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
