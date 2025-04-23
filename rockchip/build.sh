@@ -1,6 +1,12 @@
 #!/bin/bash
 # 添加插件
-sed -i '1a\src kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/' /home/build/immortalwrt/repositories.conf
+echo "$PWD"
+exit 0
+
+# wget -p /root/ipk -r https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/
+# find /path/to/search -name "*.ipk" -exec mv {} /path/to/destination \;
+
+sed -i '1a\src kiddin9_packages ' /home/build/immortalwrt/repositories.conf
 # echo "src/gz kiddin9_packages https://dl.openwrt.ai/releases/24.10/packages/aarch64_generic/kiddin9/" >>/home/build/immortalwrt/repositories.conf
 # Log file for debugging
 LOGFILE="/tmp/uci-defaults-log.txt"
